@@ -91,18 +91,22 @@ button {
   max-width: 91.25rem;
   position: relative;
 }
-.example__container::before {
-  content: '';
-  background: url(../img/wifi_black_48dp.svg) 0 0 / 100% no-repeat;
-  position: absolute;
-  top: 0;
-  right: 0;
-  /* 48px(width) / 1440px * 100% * 3*/
-  width: 9.99%;
-  /* 48px(height) / 1440px * 100% * 3*/
-  padding-top: 9.99%;
-  top: 50%;
-  transform: translate(50%, -50%);
+
+/* 768px(media-query) / 16px(default font-size) */
+@media (min-width: 48em) {
+  .example__container::before {
+    content: '';
+    background: url(../img/wifi_black_48dp.svg) 0 0 / 100% no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* 48px(width) / 1440px * 100% * 3*/
+    width: 9.99%;
+    /* 48px(height) / 1440px * 100% * 3*/
+    padding-top: 9.99%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
 }
 .example__header {
   margin-bottom: 25px;
@@ -133,19 +137,41 @@ button {
   /* 5px(letter-space) / 42px(actual font-size) */
   letter-spacing: 0.12em;
 }
+
+@media (max-width: 48em) {
+  .example__title {
+    font-size: 2rem;
+  }
+}
 .example__text {
+  line-height: 1.5;
 }
 .example__items {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  margin: 0 -12px;
 }
 .example__item {
+  padding: 0 12px;
+  /* 100%(main width) / 3(amount of cards) */
+  flex: 1 1 33.333%;
+  /* 290px(the size we need) / 16px(default font-size) */
+  min-width: 18.125rem;
 }
 .item-example {
+  display: flex;
+  column-gap: 23px;
 }
 .item-example__icon {
-}
-.item-example__body {
+  flex: 0 0 30px;
 }
 .item-example__title {
+  color: palevioletred;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 0.45em;
 }
 .item-example__text {
+  line-height: 1.5;
 }
