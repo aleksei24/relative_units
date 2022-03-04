@@ -15,8 +15,67 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>hello</h1>
-      <span class="material-icons-outlined"> anchor </span>
+      <header class="header">
+        <div class="header__top top-header">
+          <div class="top-header__container container">
+            <div class="top-header__menu menu" id="menu">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="!#" class="menu__link">About Us</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="!#" class="menu__link">Menu Link #2</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="!#" class="menu__link">News</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="!#" class="menu__link">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <a href="" class="top-header__user">
+              <span class="material-icons-outlined icon_user"> person </span>
+              Enter
+            </a>
+            <div class="icon-menu">
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="header__body body-header">
+          <div class="body-header__container">
+            <a href="!#" class="body-header__logo">
+              <span class="material-icons-outlined icon_logo"> anchor </span>
+            </a>
+            <div class="body-header__search">
+              <form action="#" class="search-header">
+                <label for="search-header__submit">
+                  <button type="submit" class="search-header__button">
+                    <span class="material-icons-outlined icon_search"> search </span>
+                  </button>
+                </label>
+                <label for="search-header__input">
+                  <input
+                    type="text"
+                    title="title"
+                    autocomplete="off"
+                    data-error="Error"
+                    placeholder="Search"
+                    name="form[]"
+                    class="search-header__input"
+                  />
+                </label>
+              </form>
+            </div>
+            <div class="body-header__actions actions-header"></div>
+          </div>
+        </div>
+        <div class="header__catalog catalog-header"></div>
+      </header>
+      <main class="page"></main>
     </div>
     <script src="./js/script.js"></script>
   </body>
