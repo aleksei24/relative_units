@@ -100,7 +100,7 @@ button {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 0.625em;
 }
 .material-icons-outlined {
   font-family: 'Material Icons';
@@ -293,8 +293,6 @@ button {
 
 /* ============================ */
 
-.body-header__actions {
-}
 .actions-header {
   display: flex;
   align-items: center;
@@ -318,38 +316,38 @@ button {
   font-size: 1.125em;
   white-space: nowrap;
 }
-.actions-header__cart {
-}
 .cart-header {
   display: flex;
+  align-items: center;
   column-gap: 0.9375em;
 }
 .cart-header__icon {
-  flex: 0 0 1em;
-  font-size: 2.1875rem;
-  position: relative;
-  color: rgb(110, 110, 110);
+  flex: 0 0 2em;
 }
-.cart-header__icon span {
+.cart-header__num {
   background-color: orangered;
   color: wheat;
   font-size: 0.75rem;
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .cart-header__body {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.125;
+  flex: 0 0 auto;
 }
 .cart-header__sum {
   font-weight: 500;
+}
+.cart-header__sum:not(:last-child) {
+  margin-bottom: 0.25em;
 }
 .cart-header__link {
   color: orangered;
@@ -374,6 +372,12 @@ button {
 }
 .icon_location {
   margin-right: 0.625em;
+}
+.icon_cart {
+  font-size: 2.1875rem;
+  position: relative;
+  color: rgb(110, 110, 110);
+  position: relative;
 }
 
 /* ================================== */
