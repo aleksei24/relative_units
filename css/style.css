@@ -238,9 +238,9 @@ button {
   font-weight: 600;
   line-height: 1.2;
 }
+
 /* ============================ */
-.header__body {
-}
+
 .body-header {
   padding: 0.625em 0;
   background-color: #fff;
@@ -250,9 +250,9 @@ button {
   align-items: center;
   min-height: 4.375em;
 }
-.body-header__logo {
-}
 .body-header__search {
+  flex: 1 1 auto;
+  padding-right: 1.25em;
   padding-left: 9.375em;
 }
 @media (max-width: 95em) {
@@ -265,6 +265,7 @@ button {
   border-radius: 3px;
   position: relative;
   border: 1px solid palevioletred;
+  max-width: 21.875em;
 }
 .search-header__button {
   background-color: transparent;
@@ -278,22 +279,82 @@ button {
   justify-content: center;
   font-size: 1rem;
 }
-.icon_search {
-}
 .search-header__input {
   background-color: transparent;
   border-radius: 3px;
   height: 2.5625em;
   color: var(--main-colour);
   padding: 0 0.625em 0 2.5em;
+  width: 100%;
 }
 .search-header__input::placeholder {
   color: grey;
 }
+
+/* ============================ */
+
 .body-header__actions {
 }
 .actions-header {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5em;
 }
+.actions-header__location {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1.5em;
+}
+.actions-header__phones {
+}
+.phones-header {
+}
+.phones-header__items {
+}
+.phones-header__item {
+  display: flex;
+}
+.phones-header__phone {
+  font-size: 1.125em;
+  white-space: nowrap;
+}
+.actions-header__cart {
+}
+.cart-header {
+  display: flex;
+  column-gap: 0.9375em;
+}
+.cart-header__icon {
+  flex: 0 0 1em;
+  font-size: 2.1875rem;
+  position: relative;
+  color: rgb(110, 110, 110);
+}
+.cart-header__icon span {
+  background-color: orangered;
+  color: wheat;
+  font-size: 0.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-header__body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.cart-header__sum {
+  font-weight: 500;
+}
+.cart-header__link {
+  color: orangered;
+}
+
 /* ============================ */
 .icon_user {
   color: red;
@@ -310,6 +371,9 @@ button {
 .icon_search {
   color: grey;
   font-size: 1rem;
+}
+.icon_location {
+  margin-right: 0.625em;
 }
 
 /* ================================== */
