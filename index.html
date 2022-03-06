@@ -100,10 +100,14 @@
             <nav class="catalog-header__menu menu-catalog">
               <ul class="menu-catalog__list">
                 <li class="menu-catalog__item">
-                  <a href="#!" class="menu-catalog__link">Catalogue #1</a>
+                  <button type="button" data-parent="1" class="menu-catalog__link">
+                    Catalogue #1
+                  </button>
                 </li>
                 <li class="menu-catalog__item">
-                  <a href="#!" class="menu-catalog__link">Catalogue #2</a>
+                  <button type="button" data-parent="2" class="menu-catalog__link">
+                    Catalogue #2
+                  </button>
                 </li>
                 <li class="menu-catalog__item">
                   <a href="#!" class="menu-catalog__link">Catalogue #3</a>
@@ -117,7 +121,7 @@
               </ul>
               <div class="menu-catalog__sub-menu sub-menu-catalog">
                 <div class="sub-menu-catalog__container">
-                  <div class="sub-menu-catalog__block">
+                  <div hidden data-submenu="1" class="sub-menu-catalog__block">
                     <div class="sub-menu-catalog__column">
                       <a href="#!" class="sub-menu-catalog__category">main category</a>
                       <ul class="sub-menu-catalog__list">
@@ -207,6 +211,44 @@
                         </li>
                         <li class="sub-menu-catalog__item">
                           <a href="#!" class="sub-menu-catalog__link">category link #7</a>
+                        </li>
+                      </ul>
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                  </div>
+                  <div hidden data-submenu="2" class="sub-menu-catalog__block">
+                    <div class="sub-menu-catalog__column">
+                      <a href="#!" class="sub-menu-catalog__category">auxilary category #2</a>
+                      <ul class="sub-menu-catalog__list">
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                        </li>
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                        </li>
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #3</a>
+                        </li>
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #4</a>
+                        </li>
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #5</a>
+                        </li>
+                      </ul>
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                    <div class="sub-menu-catalog__column">
+                      <a href="#!" class="sub-menu-catalog__category">auxilary category #3</a>
+                      <ul class="sub-menu-catalog__list">
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                        </li>
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                        </li>
+                        <li class="sub-menu-catalog__item">
+                          <a href="#!" class="sub-menu-catalog__link">category link #3</a>
                         </li>
                       </ul>
                       <a href="#!" class="sub-menu-catalog__all">show all</a>
