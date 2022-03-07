@@ -12,6 +12,14 @@ function toggleMenu(params) {
 
 document.addEventListener('click', documentActions);
 
+const menuBlocks = document.querySelectorAll('.sub-menu-catalog__block');
+if (menuBlocks.length) {
+  menuBlocks.forEach((block) => {
+    const menuBlockItems = block.querySelectorAll('.sub-menu-catalog__category').length;
+    block.classList.add(`sub-menu-catalog__block_${menuBlockItems}`);
+  });
+}
+
 function documentActions(e) {
   const targetElement = e.target;
 
