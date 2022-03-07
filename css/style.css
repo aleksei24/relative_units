@@ -8,9 +8,9 @@
   --max-width: 1920px;
   --max-width-container: 1590px;
   --laptop: 95em;
-  --tablet: 70.857em;
-  --mobile: 54.857em;
-  --mobile-small: 34.285em;
+  --tablet: 62em;
+  --mobile: 48em;
+  --mobile-small: 30em;
   --conteiner-width: 1610px;
 }
 
@@ -131,11 +131,12 @@ button {
 .icon-menu {
   display: none;
 }
-@media (max-width: 54.857em) {
+@media (max-width: 62em) {
   .icon-menu {
     display: block;
     position: relative;
     flex: 0 0 30px;
+    width: 30px;
     height: 20px;
     z-index: 10;
     cursor: pointer;
@@ -217,23 +218,25 @@ button {
 .top-header__menu {
   flex: 1 1 auto;
 }
-.menu__list {
+.menu-top-header {
+}
+.menu-top-header__list {
   display: flex;
   flex-wrap: wrap;
   column-gap: 3.75em;
   row-gap: 5px;
 }
 @media (max-width: 95em) {
-  .menu__list {
+  .menu-top-header__list {
     column-gap: calc(20px + (60 - 20) * (100vw - 320px) / (1520 - 320));
   }
 }
-.menu__link {
+.menu-top-header__link {
   font-size: 1rem;
   line-height: 1.25;
 }
 @media (any-hover: hover) {
-  .menu__link:hover {
+  .menu-top-header__link:hover {
     text-decoration: underline;
   }
 }
@@ -259,10 +262,11 @@ button {
   display: flex;
   align-items: center;
   min-height: 4.375em;
+  gap: 1em;
 }
-.body-header__logo {
+/* .body-header__logo {
   padding: 0 0.5em;
-}
+} */
 .body-header__search {
   flex: 1 1 auto;
   padding-right: 1.25em;
@@ -311,10 +315,20 @@ button {
   align-items: center;
   column-gap: 1.5em;
 }
+@media (max-width: 75em) {
+  .actions-header {
+    column-gap: calc(16px + (24 - 16) * (100vw - 320px) / (1520 - 320));
+  }
+}
 .actions-header__location {
   display: inline-flex;
   align-items: center;
   margin-right: 1.5em;
+}
+@media (max-width: 95em) {
+  .actions-header__location {
+    margin-right: calc(4px + (24 - 4) * (100vw - 320px) / (1520 - 320));
+  }
 }
 @media (any-hover: hover) {
   .actions-header__location:hover {
@@ -365,6 +379,11 @@ button {
   font-size: 1rem;
   line-height: 1.125;
   flex: 0 0 auto;
+}
+@media (max-width: 75em) {
+  .cart-header__body {
+    display: none;
+  }
 }
 .cart-header__sum {
   font-weight: 500;
@@ -525,6 +544,11 @@ button {
   animation-duration: 4s;
   animation-name: pulselogo;
   animation-iteration-count: infinite;
+}
+@media (max-width: 62em) {
+  .icon_logo {
+    font-size: calc(48px + (64 - 48) * (100vw - 320px) / (1520 - 320));
+  }
 }
 .icon_search {
   color: grey;
