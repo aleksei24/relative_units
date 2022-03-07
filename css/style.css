@@ -260,6 +260,9 @@ button {
   align-items: center;
   min-height: 4.375em;
 }
+.body-header__logo {
+  padding: 0 0.5em;
+}
 .body-header__search {
   flex: 1 1 auto;
   padding-right: 1.25em;
@@ -267,7 +270,7 @@ button {
 }
 @media (max-width: 95em) {
   .body-header__search {
-    padding-left: calc(20px + (150 - 20) * (100vw - 320px) / (1520 - 320));
+    padding-left: calc(20px + (150 - 20) * (100vw - 992px) / (1520 - 992));
   }
 }
 .search-header {
