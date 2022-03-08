@@ -128,6 +128,20 @@ button {
 }
 /* ================================= */
 
+.menu {
+  display: none;
+}
+@media (max-width: 62em) {
+  .menu {
+    display: block;
+    flex: 0 0 30px;
+  }
+}
+.menu__body {
+}
+
+/* ================================= */
+
 .icon-menu {
   display: none;
 }
@@ -135,7 +149,6 @@ button {
   .icon-menu {
     display: block;
     position: relative;
-    flex: 0 0 30px;
     width: 30px;
     height: 20px;
     z-index: 10;
