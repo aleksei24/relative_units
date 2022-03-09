@@ -150,10 +150,22 @@ button {
     left: -100%;
     overflow: auto;
     background-color: rgb(73, 73, 73);
-    padding: 3.125em 0.9375em;
+    padding: 4em 0.65em;
     z-index: 4;
   }
+  .menu__body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    left: -100%;
+    top: 0;
+    background-color: rgb(73, 73, 73);
+  }
   .menu__body.active {
+    left: 0;
+  }
+  .menu__body::before.active {
     left: 0;
   }
 }
@@ -246,6 +258,11 @@ button {
   gap: 1.25em;
   min-height: 3.125em;
 }
+@media (max-width: 48em) {
+  .top-header__container {
+    gap: 2em;
+  }
+}
 .top-header__menu {
   flex: 1 1 auto;
 }
@@ -266,7 +283,7 @@ button {
   .menu-top-header__list {
     flex-direction: column;
     column-gap: calc(20px + (60 - 20) * (100vw - 320px) / (1520 - 320));
-    row-gap: 1em;
+    row-gap: 2em;
   }
 }
 .menu-top-header__link {
@@ -275,10 +292,9 @@ button {
 }
 @media (max-width: 62em) {
   .menu-top-header__link {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
-
 .menu-top-header__link_catalog {
   display: flex;
   justify-content: space-between;
@@ -299,6 +315,8 @@ button {
   align-items: center;
   font-weight: 600;
   line-height: 1.2;
+  position: relative;
+  z-index: 5;
 }
 @media (max-width: 62em) {
   .top-header__user {
@@ -328,10 +346,11 @@ button {
     justify-content: space-between;
   }
 }
-
-/* .body-header__logo {
-  padding: 0 0.5em;
-} */
+@media (max-width: 30em) {
+  .body-header__container {
+    min-height: 3em;
+  }
+}
 .body-header__search {
   padding-right: 1em;
   padding-left: 9.375em;
@@ -347,6 +366,11 @@ button {
     padding-right: 1.25em;
   }
 }
+@media (max-width: 30em) {
+  .body-header__search {
+    padding-left: 1.25em;
+  }
+}
 .search-header {
   background-color: rgba(7, 7, 7, 0.03);
   border-radius: 3px;
@@ -356,6 +380,11 @@ button {
 @media (min-width: 62em) {
   .search-header {
     max-width: 21.875em;
+  }
+}
+@media (max-width: 30em) {
+  .search-header {
+    background-color: #fff;
   }
 }
 .search-header__button {
@@ -422,6 +451,8 @@ button {
 .actions-header__phones {
 }
 .phones-header {
+  position: relative;
+  z-index: 5;
 }
 .phones-header__items {
 }
@@ -452,6 +483,8 @@ button {
   display: flex;
   align-items: center;
   column-gap: 0.9375em;
+  position: relative;
+  z-index: 5;
 }
 .cart-header__icon {
   flex: 0 0 2em;
@@ -502,11 +535,26 @@ button {
   color: aliceblue;
   position: relative;
 }
+@media (max-width: 30em) {
+  .catalog-header {
+    padding: 1.25em 0;
+  }
+}
 .catalog-header__container {
 }
 .catalog-header__menu {
 }
 .menu-catalog {
+}
+@media (max-width: 62em) {
+  .menu-catalog {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
 }
 .menu-catalog__list {
   display: flex;
