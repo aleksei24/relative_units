@@ -1,4 +1,5 @@
 const menu = document.querySelector('.icon-menu');
+const menuBody = document.querySelector('.menu__body');
 
 if (menu) {
   menu.addEventListener('click', toggleMenu);
@@ -6,6 +7,7 @@ if (menu) {
 
 function toggleMenu(params) {
   menu.classList.toggle('active');
+  menuBody.classList.toggle('active');
 }
 
 // ================================================
@@ -45,3 +47,5 @@ function documentActions(e) {
     }
   }
 }
+
+// =================================================

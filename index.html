@@ -19,7 +19,14 @@
         <div class="header__top top-header">
           <div class="top-header__container container">
             <nav class="top-header__menu menu-top-header">
-              <ul class="menu-top-header__list">
+              <ul data-dynamic="menu__body,1,992" class="menu-top-header__list">
+                <li class="menu-top-header__item">
+                  <a href="" class="menu-top-header__link menu-top-header__link_catalog">Catalogue
+                    <span class="material-icons-outlined icon_menu-link">
+                      expand_more
+                      </span>
+                  </a>
+                </li>
                 <li class="menu-top-header__item">
                   <a href="#!" class="menu-top-header__link">About Us</a>
                 </li>
@@ -76,14 +83,18 @@
                 <span class="material-icons icon_location"> place </span>
                 remote town N
               </a>
-              <div class="actions-header__phones phones-header">
+              <div data-dynamic="top-header__container,1,992" class="actions-header__phones phones-header">
                 <div class="phones-header__items">
                   <div class="phones-header__item">
-                    <a href="#!" class="phones-header__phone">8-800-111-22-33</a>
+                    <a href="#!" class="phones-header__phone">
+                      <span class="material-icons-outlined icon_phone">
+                        phone
+                        </span>
+                      8-800-111-22-33</a>
                   </div>
                 </div>
               </div>
-              <a href="#!" class="actions-header__cart cart-header">
+              <a href="#!" data-dynamic="top-header__container,3,992" class="actions-header__cart cart-header">
                 <div class="cart-header__icon">
                   <span class="material-icons-outlined icon_cart">shopping_cart</span>
                   <span class="cart-header__num"> 0 </span>
@@ -277,5 +288,6 @@
       <main class="page"></main>
     </div>
     <script src="./js/script.js"></script>
+    <script src="./js/dynamicAdapt.js"></script>
   </body>
 </html>
