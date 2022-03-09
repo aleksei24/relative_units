@@ -8,6 +8,12 @@ if (menu) {
 function toggleMenu(params) {
   menu.classList.toggle('active');
   menuBody.classList.toggle('active');
+
+  const menuCatalog = document.querySelector('.menu-catalog');
+
+  if (menuCatalog.classList.contains('catalog-open')) {
+    menuCatalog.classList.remove('catalog-open');
+  }
 }
 
 // ================================================
@@ -29,7 +35,6 @@ function documentActions(e) {
     e.preventDefault();
     const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
     const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
-    const catalogMenu = document.querySelector('.menu-catalog__sub-menu');
 
     if (subMenu) {
       const activeLink = document.querySelector('.sub-menu-active');
@@ -45,6 +50,25 @@ function documentActions(e) {
     } else {
       console.log("The sub-menu you're lookig for doesn't exist");
     }
+  }
+
+  if (targetElement.closest('.menu-top-header__link_catalog')) {
+    e.preventDefault();
+    const menuCatalog = document.querySelector('.menu-catalog');
+    // const catalogLink = targetElement.closest('.menu-top-header__link_catalog');
+    menuCatalog.classList.add('catalog-open');
+  }
+
+  if (targetElement.closest('.menu-catalog__back')) {
+    e.preventDefault();
+    // const menuCatalogBack = document.querySelector('.menu-catalog__back');
+    targetElement.addEventListener('click', function () {
+      // e.preventDefault();
+      document.querySelector('.menu-catalog').remove('catalog-open');
+    });
+    // document.documentElement.classList.remove('catalog-open');
+
+    // document.documentElement.classList.remove('sub-catalog-open');
   }
 }
 

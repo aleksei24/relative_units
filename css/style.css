@@ -150,7 +150,7 @@ button {
     left: -100%;
     overflow: auto;
     background-color: rgb(73, 73, 73);
-    padding: 4em 0.65em;
+    padding: 4.5em 0.65em;
     z-index: 4;
   }
   .menu__body::before {
@@ -161,11 +161,12 @@ button {
     left: -100%;
     top: 0;
     background-color: rgb(73, 73, 73);
+    z-index: 5;
   }
   .menu__body.active {
     left: 0;
   }
-  .menu__body::before.active {
+  .menu__body.active::before {
     left: 0;
   }
 }
@@ -554,26 +555,66 @@ button {
     width: 100%;
     height: 100%;
     overflow: auto;
+    background-color: rgb(73, 73, 73);
+    transition: ease 0.3s all 0s;
+    padding: 4.5em 0.625em;
+  }
+  .menu-catalog.catalog-open {
+    left: 0;
+    z-index: 6;
+  }
+}
+.menu-catalog__back {
+  display: none;
+}
+@media (max-width: 62em) {
+  .menu-catalog__back {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgb(73, 73, 73);
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    padding: 0.375em 1em;
+    font-size: 1.5rem;
+  }
+  .menu-catalog__back:not(:last-child) {
+    margin-bottom: 2.125em;
   }
 }
 .menu-catalog__list {
   display: flex;
   justify-content: space-between;
-  gap: 0.625em;
+  column-gap: 0.625em;
+}
+@media (max-width: 62em) {
+  .menu-catalog__list {
+    flex-direction: column;
+    row-gap: 1.5625em;
+  }
 }
 .menu-catalog__item {
 }
 .menu-catalog__link {
-  min-height: 4.375em;
-  padding: 0 0.625em;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   position: relative;
   background-color: transparent;
   color: aliceblue;
   transition: colour 0.3s ease 0s;
+  font-size: 1.125rem;
+}
+@media (min-width: 62em) {
+  .menu-catalog__link {
+    padding: 0 0.625em;
+    min-height: 4.375em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 62em) {
+  .menu-catalog__link {
+    font-size: 1.5rem;
+  }
 }
 .menu-catalog__link.sub-menu-active {
   color: orangered;
@@ -607,8 +648,24 @@ button {
 .menu-catalog__sub-menu {
   width: 100%;
   left: 0;
-  top: 100%;
+  top: 0%;
   background-color: rgb(73, 73, 73);
+}
+/* @media (max-width: 62em) {
+  .menu-catalog__sub-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(73, 73, 73);
+    padding: 4.5em 0.625em;
+    transition: ease 0.3s all 0s;
+  }
+  
+} */
+.sub-menu-catalog__back {
 }
 .sub-menu-catalog__block {
   display: none;
