@@ -5,14 +5,24 @@ if (menu) {
   menu.addEventListener('click', toggleMenu);
 }
 
-function toggleMenu(params) {
+function toggleMenu() {
   menu.classList.toggle('active');
   menuBody.classList.toggle('active');
 
   const menuCatalog = document.querySelector('.menu-catalog');
+  const catalogHeaderMenu = document.querySelector('.catalog-header__menu');
+  const subMenuCatalog = document.querySelector('.sub-menu-catalog');
+
+  if (catalogHeaderMenu.classList.contains('catalog-open')) {
+    catalogHeaderMenu.classList.remove('catalog-open');
+  }
 
   if (menuCatalog.classList.contains('catalog-open')) {
     menuCatalog.classList.remove('catalog-open');
+  }
+
+  if (subMenuCatalog.classList.contains('sub-menu-open')) {
+    subMenuCatalog.classList.remove('sub-menu-open');
   }
 }
 
@@ -45,31 +55,38 @@ function documentActions(e) {
         activeBlock.classList.remove('sub-menu-open');
       }
 
+      document.querySelector('.sub-menu-catalog').classList.toggle('sub-menu-open');
       targetElement.classList.toggle('sub-menu-active');
       subMenu.classList.toggle('sub-menu-open');
     } else {
       console.log("The sub-menu you're lookig for doesn't exist");
     }
   }
-
-  if (targetElement.closest('.menu-top-header__link_catalog')) {
-    e.preventDefault();
-    const menuCatalog = document.querySelector('.menu-catalog');
-    // const catalogLink = targetElement.closest('.menu-top-header__link_catalog');
-    menuCatalog.classList.add('catalog-open');
-  }
-
-  if (targetElement.closest('.menu-catalog__back')) {
-    e.preventDefault();
-    // const menuCatalogBack = document.querySelector('.menu-catalog__back');
-    targetElement.addEventListener('click', function () {
-      // e.preventDefault();
-      document.querySelector('.menu-catalog').remove('catalog-open');
-    });
-    // document.documentElement.classList.remove('catalog-open');
-
-    // document.documentElement.classList.remove('sub-catalog-open');
-  }
 }
 
 // =================================================
+
+const menuTopHeaderLinkCatalog = document.querySelector('.menu-top-header__link_catalog');
+menuTopHeaderLinkCatalog.addEventListener('click', function (e) {
+  e.preventDefault();
+  const menuCatalog = document.querySelector('.menu-catalog');
+  menuCatalog.classList.add('catalog-open');
+});
+
+const menuCatalogBack = document.querySelector('.menu-catalog__back');
+menuCatalogBack.addEventListener('click', function () {
+  document.querySelector('.menu-catalog').classList.remove('catalog-open');
+});
+
+const subMenuCatalogBack = document.querySelector('.sub-menu-catalog__back');
+const subMenuCatalogBlock = document.querySelector('.sub-menu-catalog__block');
+const subMenuCatalog = document.querySelector('.sub-menu-catalog');
+const menuCatalogLink = document.querySelectorAll('.menu-catalog__link');
+subMenuCatalogBack.addEventListener('click', function () {
+  subMenuCatalog.classList.toggle('sub-menu-open');
+  // if (
+  //   document.documentElement.closest('.menu-catalog__link').classList.contains('sub-menu-active')
+  // ) {
+  //   document.documentElement.classList.remove('sub-menu-active');
+  // }
+});
