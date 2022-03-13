@@ -90,3 +90,7 @@ subMenuCatalogBack.addEventListener('click', function () {
   //   document.documentElement.classList.remove('sub-menu-active');
   // }
 });
+
+tippy('[data-tippy-content]', {
+  content: 'My tooltip!',
+});

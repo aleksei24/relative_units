@@ -102,6 +102,25 @@ button {
   margin: 0 auto;
   padding: 0 0.625em;
 }
+.button {
+  display: inline-block;
+  padding: 0;
+  color: black;
+  background-color: pink;
+  border: 3px solid rgb(255, 73, 73);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.5em 3.5em;
+  line-height: 1.4;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .button:hover {
+    color: aliceblue;
+    background-color: purple;
+  }
+}
 .material-icons-outlined {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -831,6 +850,10 @@ button {
 .icon_back {
   margin-right: 1em;
 }
+.icon_premium {
+  font-size: 1.5rem;
+  color: antiquewhite;
+}
 
 /* ================================== */
 @keyframes pulselogo {
@@ -847,3 +870,175 @@ button {
 
 /* ================================== */
 /* main */
+
+.page__main-block {
+}
+.main-block {
+  background-color: rgba(0, 0, 0, 0.75);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding: 40px 0 60px 0;
+}
+/*font-size: calc(24px + (70 - 24) * (100vw - 320px) / (1520 - 320));*/
+@media (max-width: 95em) {
+  .main-block {
+    padding-top: calc(20px + (40 - 20) * (100vw - 320px) / (1520 - 320));
+    padding-bottom: calc(20px + (60 - 20) * (100vw - 320px) / (1520 - 320));
+  }
+}
+.main-block__container {
+  max-width: 100em;
+}
+.main-block__body {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 1fr 30%;
+}
+.main-block__slider {
+}
+.main-block__swiper {
+}
+.main-block__slide {
+}
+.slide-main-block {
+}
+.slide-main-block__content {
+  color: aliceblue;
+  padding-right: 2em;
+}
+.slide-main-block__content:not(:last-child) {
+  margin-bottom: 3em;
+}
+@media (max-width: 95em) {
+  .slide-main-block__content:not(:last-child) {
+    margin-bottom: calc(30px + (48 - 30) * (100vw - 320px) / (1520 - 320));
+  }
+}
+.slide-main-block__title {
+  font-size: 2.25rem;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+.slide-main-block__title:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+.slide-main-block__sub-title {
+  font-weight: 500;
+  font-size: 2.125rem;
+  line-height: 1.4;
+}
+.slide-main-block__sub-title:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+.slide-main-block__text {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.slide-main-block__button {
+}
+.main-block__media {
+}
+.media-main-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em;
+}
+.media-main-block__body {
+  position: relative;
+}
+.media-main-block__image {
+}
+.media-main-block__image img {
+  z-index: 2;
+}
+.media-main-block__image::before {
+  content: '';
+  height: 250px;
+  width: 250px;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(30%, 0px);
+}
+.media-main-block__tips {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.media-main-block__tip {
+  width: 1.25em;
+  height: 1.25em;
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .media-main-block__tip:hover {
+    transform: rotate(45deg);
+  }
+}
+.media-main-block__tip::before,
+.media-main-block__tip::after {
+  content: '';
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.media-main-block__tip::after {
+  transform: scale(1.5);
+  opacity: 0.5;
+}
+.media-main-block__tip span {
+  z-index: 2;
+  color: green;
+  font-weight: 700;
+  font-size: 1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media-main-block__tip_1 {
+  /* top: position from the top of the image in pixels / height og the image = per cent */
+  top: 40%;
+  left: 8%;
+}
+.media-main-block__tip_2 {
+  top: 25%;
+  right: 11%;
+}
+.media-main-block__tip_3 {
+  bottom: 0%;
+  right: 0%;
+}
+.main-block__advantages {
+}
+.advantages-main {
+}
+.advantages-main__item {
+}
+.advantages-main__icon {
+}
+.material-icons-outlined {
+}
+.icon_premium {
+}
+.advantages-main__text {
+}
