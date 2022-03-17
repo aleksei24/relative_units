@@ -1064,6 +1064,7 @@ button {
   display: inline-grid;
   grid-auto-flow: column;
   gap: 1em;
+  transform: translate(0, 25%);
 }
 .controll-main-block__dotts .swiper-pagination-bullet {
   cursor: pointer;
@@ -1072,6 +1073,19 @@ button {
   background-color: transparent;
   position: relative;
   transition: all 0.3s ease 0s;
+}
+.controll-main-block__dotts .swiper-pagination-bullet::before {
+  content: '';
+  background-color: orangered;
+  position: absolute;
+  width: 0.625em;
+  height: 0.625em;
+  top: 50%;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  transition: left 0.3s ease 0s;
+  opacity: 0;
 }
 .controll-main-block__dotts .swiper-pagination-bullet::after {
   content: '';
@@ -1086,26 +1100,27 @@ button {
   width: 4em;
 }
 .controll-main-block__dotts .swiper-pagination-bullet-active::before {
-  content: '';
-  background-color: orangered;
-  position: absolute;
-  width: 0.625em;
-  height: 0.625em;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translate(0, -50%);
+  opacity: 1;
+  left: 4em;
+  transition: left 4s linear 0s;
 }
 .controll-main-block__dotts .swiper-pagination-bullet-active::after {
   background-color: orangered;
 }
-.controll-main-block__fraction {
-  display: flex;
-  color: #fff;
-}
+
+/* ========================================== */
+
 .fraction-controll {
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  letter-spacing: 0.075em;
 }
 .fraction-controll__current {
+  color: orangered;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 .fraction-controll__all {
+  font-size: 1rem;
 }
