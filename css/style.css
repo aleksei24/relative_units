@@ -109,6 +109,7 @@ button {
   background-color: pink;
   border: 3px solid rgb(255, 73, 73);
   border-radius: 5px;
+  text-align: center;
   font-size: 1.25rem;
   font-weight: 700;
   padding: 0.5em 3.5em;
@@ -893,8 +894,21 @@ button {
 .main-block__body {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 30%;
   align-items: start;
+  row-gap: 2.5em;
+}
+@media (min-width: 62em) {
+  .main-block__body {
+    grid-template-columns: 1fr 30%;
+  }
+}
+.main-block__body:not(:last-child) {
+  margin-bottom: 4em;
+}
+@media (max-width: 95em) {
+  .main-block__body:not(:last-child) {
+    margin-bottom: calc(30px + (64 - 30) * (100vw - 320px) / (1520 - 320));
+  }
 }
 .main-block__slider {
   overflow: hidden;
@@ -912,7 +926,6 @@ button {
 }
 .slide-main-block__content {
   color: aliceblue;
-  padding-right: 2em;
 }
 .slide-main-block__content:not(:last-child) {
   margin-bottom: 3em;
@@ -920,6 +933,11 @@ button {
 @media (max-width: 95em) {
   .slide-main-block__content:not(:last-child) {
     margin-bottom: calc(30px + (48 - 30) * (100vw - 320px) / (1520 - 320));
+  }
+}
+@media (max-width: 62em) {
+  .slide-main-block__content {
+    padding-right: 2em;
   }
 }
 .slide-main-block__title {
@@ -943,8 +961,21 @@ button {
   font-size: 1.25rem;
   line-height: 1.4;
 }
-
-.slide-main-block__button {
+@media (max-width: 62em) {
+  .slide-main-block__title {
+    font-size: calc(24px + (36 - 24) * (100vw - 320px) / (1520 - 320));
+  }
+  .slide-main-block__sub-title {
+    font-size: calc(21px + (34 - 21) * (100vw - 320px) / (1520 - 320));
+  }
+  .slide-main-block__text {
+    font-size: calc(18px + (20 - 18) * (100vw - 320px) / (1520 - 320));
+  }
+}
+@media (max-width: 30em) {
+  .slide-main-block__button {
+    width: 100%;
+  }
 }
 .main-block__media {
 }
@@ -961,11 +992,16 @@ button {
 }
 .media-main-block__image img {
   z-index: 2;
+  max-width: 100%;
 }
 .media-main-block__image::before {
   content: '';
-  height: 250px;
-  width: 250px;
+  /* 250px is the width of the circle */
+  /* divided by */
+  /* 474px is the size of the block */
+  /* shaman's dancing */
+  padding-bottom: 99%;
+  width: 100%;
   border: 2px solid yellow;
   border-radius: 50%;
   position: absolute;
@@ -1035,19 +1071,30 @@ button {
   bottom: 0%;
   right: 0%;
 }
-.main-block__advantages {
-}
+
+/* ======================================================= */
+
 .advantages-main {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 0.625em;
+  justify-content: space-between;
 }
 .advantages-main__item {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  text-align: center;
+  max-width: 18.75em;
 }
 .advantages-main__icon {
 }
-.material-icons-outlined {
-}
-.icon_premium {
-}
 .advantages-main__text {
+  color: #fff;
+  font-weight: 600;
+  line-height: 2;
+  font-size: 1.25rem;
 }
 
 /* ================================== */

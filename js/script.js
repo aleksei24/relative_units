@@ -104,9 +104,9 @@ const mySwiper = new Swiper('.main-block__slider', {
   speed: 400,
   spaceBetween: 100,
   loop: true,
-  autoplay: {
-    delay: 3000,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  // },
   pagination: {
     el: '.controll-main-block__dotts',
     clickable: true,
