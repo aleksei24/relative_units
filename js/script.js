@@ -91,6 +91,21 @@ subMenuCatalogBack.addEventListener('click', function () {
   // }
 });
 
+// ====================================================
+// tips
+
 tippy('[data-tippy-content]', {
   content: 'My tooltip!',
+});
+
+// =======================================================
+// swiper
+const mySwiper = new Swiper('.main-block__slider', {
+  speed: 400,
+  spaceBetween: 100,
+  loop: true,
+  pagination: {
+    el: '.controll-main-block__dotts',
+    clickable: true,
+  },
 });
