@@ -1178,37 +1178,47 @@ button {
 
 /* ====================================================================== */
 
-.page__catalog-cards {
-}
 .catalog-cards {
   padding-top: 5em;
   padding-bottom: 3.5em;
 }
 @media (max-width: 95em) {
   .catalog-cards {
-    padding-top: calc(30px + (80 - 30) * (100vw - 320px) / (1520 - 320));
-    padding-bottom: calc(30px + (56 - 30) * (100vw - 320px) / (1520 - 320));
+    padding-top: calc(40px + (80 - 40) * (100vw - 320px) / (1520 - 320));
+    padding-bottom: calc(40px + (56 - 40) * (100vw - 320px) / (1520 - 320));
   }
 }
 .catalog-cards__container {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17.5em, 1fr));
+  gap: 1.875em;
 }
-.catalog-cards__item {
+@media (min-width: 30em) {
+  .catalog-cards__container {
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  }
 }
 .item-catalog-cards {
   box-shadow: 0px 0.25em 1.25em rgba(0, 0, 0, 0.2);
   position: relative;
-  padding: 1.75em;
   min-height: 18.125em;
   overflow: hidden;
+  transition: box-shadow 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .item-catalog-cards:hover {
+    box-shadow: 0 0.25em 1.25em rgba(0, 0, 0, 0.5);
+  }
 }
 .item-catalog-cards__body {
   position: relative;
   z-index: 2;
+  padding: 1.75em;
 }
-.item-catalog-cards__title {
+@media (max-width: 95em) {
+  .item-catalog-cards__body {
+    padding: calc(16px + (28 - 16) * (100vw - 320px) / (1520 - 320));
+  }
 }
 .item-catalog-cards__title:not(:last-child) {
   margin-bottom: 1.5em;
@@ -1231,8 +1241,6 @@ button {
   .item-catalog-cards__link-title:hover::after {
     width: 100%;
   }
-}
-.item-catalog-cards__list {
 }
 .item-catalog-cards__item {
   position: relative;
@@ -1261,13 +1269,23 @@ button {
   }
 }
 .item-catalog-cards__image {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
   text-align: right;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  transform: translate(0px, 10%);
 }
+@media (min-width: 30em) {
+  .item-catalog-cards__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+.item-catalog-cards__image img {
+  max-width: 100%;
+}
+
+/* ============================================================= */
