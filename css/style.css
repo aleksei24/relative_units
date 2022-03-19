@@ -855,6 +855,43 @@ button {
   font-size: 3.5rem;
   color: antiquewhite;
 }
+.icon_forward,
+.icon_balance,
+.icon_favourite {
+  font-size: 1.5rem;
+  color: grey;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .icon_forward:hover,
+  .icon_balance:hover,
+  .icon_favourite:hover {
+    color: orangered;
+  }
+}
+.icon_cart {
+  font-size: 1rem;
+  color: orangered;
+}
+
+/* ===================================================== */
+
+[class*='-ibg'] {
+  position: relative;
+}
+[class*='-ibg'] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+[class*='-ibg_contain'] img {
+  object-fit: contain;
+}
+
+/* ======================================================== */
 
 /* ================================== */
 @keyframes pulselogo {
@@ -1289,3 +1326,103 @@ button {
 }
 
 /* ============================================================= */
+
+.products-slider {
+}
+.products-slider__container {
+}
+.products-slider__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products-slider__header:not(:last-child) {
+  margin-bottom: 3.125em;
+}
+@media (max-width: 95em) {
+  .products-slider__header:not(:last-child) {
+    margin-bottom: calc(30px + (50 - 30) * (100vw - 320px) / (1520 - 320));
+  }
+}
+.products-slider__title {
+  font-size: 1.875em;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.products-slider__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9375em;
+  font-weight: 600;
+  color: black;
+  font-size: 1.125rem;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .products-slider__more:hover {
+    color: orangered;
+  }
+}
+.products-slider__slider {
+  padding: 0.9375em;
+  margin: 0 -0.9375em;
+}
+.products-slider__swiper {
+}
+.products-slider__slide {
+}
+.product-card {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0em 0.25em 1.25em rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .product-card {
+    box-shadow: 0em 0.375em 1.25em rgba(0, 0, 0, 0.35);
+  }
+}
+.product-card__image-ibg {
+  padding-bottom: 20%;
+}
+.product-card__body {
+  padding: 1.25em;
+}
+.product-card__title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.product-card__link-title {
+}
+.product-card__info:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+.info-product-card {
+  color: #ababab;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.625em;
+}
+.info-product-card__size {
+}
+.info-product-card__meterials {
+}
+.product-card__footer {
+  border-top: 1px solid orangered;
+  padding-top: 1.25em;
+  display: flex;
+  align-items: center;
+  gap: 0.9375em;
+}
+.product-card__price {
+  flex: 1 1 auto;
+}
+.product-card__compare {
+}
+.product-card__favourite {
+}
+.product-card__cart {
+}
