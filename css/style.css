@@ -874,6 +874,11 @@ button {
   font-size: 1rem;
   color: orangered;
 }
+.icon_new {
+  font-size: 1.5rem;
+  color: rgb(38, 0, 255);
+  padding-left: 0.5em;
+}
 
 /* ===================================================== */
 
@@ -1426,6 +1431,7 @@ button {
   height: 100%;
   box-shadow: 0em 0.25em 1.25em rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease 0s;
+  background-color: #fff;
 }
 @media (any-hover: hover) {
   .product-card {
@@ -1467,6 +1473,9 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 0.625em;
+}
+.info-product-card__materials {
+  text-align: right;
 }
 .product-card__footer {
   border-top: 1px solid orangered;
@@ -1595,4 +1604,84 @@ button {
 }
 .hit-products__dotts .swiper-pagination-bullet-active::after {
   background-color: green;
+}
+
+/* =============================================================== */
+
+.products-new {
+  padding-top: 5em;
+  position: relative;
+  background: url(https://www.taste-fulltours.com/wp-content/uploads/2016/05/landscape-design-software-desert-landscape-ideas.jpg)
+    bottom / cover no-repeat;
+}
+.products-new::before {
+  content: '';
+  background-color: #fff;
+  height: 5em;
+  position: absolute;
+  top: -0.125em;
+  right: 0;
+  width: 70%;
+}
+.products-new__inner {
+  padding: 3.4375em 0;
+}
+@media (max-width: 95em) {
+  .products-new__inner {
+    padding-top: calc(15px + (55 - 15) * (100vw - 320px) / (1520 - 320));
+    padding-bottom: calc(15px + (55 - 15) * (100vw - 320px) / (1520 - 320));
+  }
+}
+.products-new__container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 25.15% 1fr;
+}
+.products-new__body {
+  padding-right: 4.375em;
+}
+@media (max-width: 95em) {
+  .products-new__body {
+    padding-right: calc(20px + (70 - 20) * (100vw - 320px) / (1520 - 320));
+  }
+}
+.products-new__section {
+  position: relative;
+  z-index: 2;
+}
+.products-new__title {
+  font-weight: bold;
+  line-height: 1.4;
+  font-size: 1.875rem;
+  color: #fff;
+}
+.products-new__title:not(:last-child) {
+  margin-bottom: 1.875em;
+}
+.products-new__text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+.products-new__text:not(:last-child) {
+  margin-bottom: 3.75em;
+}
+@media (max-width: 95em) {
+  .products-new__text:not(:last-child) {
+    padding-right: calc(20px + (60 - 20) * (100vw - 320px) / (1520 - 320));
+  }
+}
+.products-new__link {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(37, 17, 126);
+}
+.products-new__content {
+  min-width: 0;
+  padding-top: 2em;
+}
+.products-new__slider {
+  overflow: hidden;
 }

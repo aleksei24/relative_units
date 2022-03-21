@@ -203,3 +203,36 @@ if (document.querySelector('.hit-products')) {
     on: {},
   });
 }
+
+if (document.querySelector('.products-new')) {
+  new Swiper('.products-new__slider', {
+    speed: 4500,
+    // spaceBetween: 30,
+    // slidesPerView: 4,
+    loop: true,
+    watchOverflow: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // when window width is >= 1200px
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+    on: {},
+  });
+}
