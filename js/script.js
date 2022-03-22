@@ -217,6 +217,10 @@ if (document.querySelector('.products-new')) {
     },
 
     breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+      },
       // when window width is >= 480px
       480: {
         slidesPerView: 1,
@@ -228,7 +232,7 @@ if (document.querySelector('.products-new')) {
         spaceBetween: 20,
       },
       // when window width is >= 1200px
-      1200: {
+      1300: {
         slidesPerView: 3,
         spaceBetween: 30,
       },
