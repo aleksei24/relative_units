@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/catalog.css" />
+    <title>Test Site</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top top-header">
+          <div class="top-header__container container">
+            <nav class="top-header__menu menu-top-header">
+              <ul data-dynamic="menu__body,1,992" class="menu-top-header__list">
+                <li class="menu-top-header__item">
+                  <a href="" class="menu-top-header__link menu-top-header__link_catalog"
+                    >Catalogue
+                    <span class="material-icons-outlined icon_menu-link"> expand_more </span>
+                  </a>
+                </li>
+                <li class="menu-top-header__item">
+                  <a href="#!" class="menu-top-header__link">About Us</a>
+                </li>
+                <li class="menu-top-header__item">
+                  <a href="#!" class="menu-top-header__link">Menu Link #2</a>
+                </li>
+                <li class="menu-top-header__item">
+                  <a href="#!" class="menu-top-header__link">News</a>
+                </li>
+                <li class="menu-top-header__item">
+                  <a href="#!" class="menu-top-header__link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+            <a href="" class="top-header__user">
+              <span class="material-icons-outlined icon_user"> person </span>
+              Enter
+            </a>
+            <nav hidden class="menu">
+              <div class="menu__icon icon-menu">
+                <span></span>
+              </div>
+              <div class="menu__body"></div>
+            </nav>
+          </div>
+        </div>
+        <div class="header__body body-header">
+          <div class="body-header__container container">
+            <a href="" class="body-header__logo">
+              <span class="material-icons-outlined icon_logo"> anchor </span>
+            </a>
+            <div data-dynamic="catalog-header__container,1,480" class="body-header__search">
+              <form action="#" class="search-header">
+                <label for="search-header__submit">
+                  <button type="submit" class="search-header__button">
+                    <span class="material-icons-outlined icon_search"> search </span>
+                  </button>
+                </label>
+                <label for="search-header__input">
+                  <input
+                    type="text"
+                    title="title"
+                    autocomplete="off"
+                    data-error="Error"
+                    placeholder="Search"
+                    name="form[]"
+                    class="search-header__input"
+                  />
+                </label>
+              </form>
+            </div>
+            <div class="body-header__actions actions-header">
+              <a href="#!" class="actions-header__location">
+                <span class="material-icons icon_location"> place </span>
+                remote town N
+              </a>
+            </div>
+
+            <div
+              data-dynamic="top-header__container,1,992"
+              class="actions-header__phones phones-header"
+            >
+              <div class="phones-header__items">
+                <div class="phones-header__item">
+                  <a href="#!" class="phones-header__phone">
+                    <span class="material-icons-outlined icon_phone"> phone </span>
+                    8-800-111-22-33
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a
+              href=""
+              data-dynamic="top-header__container,3,992"
+              class="actions-header__cart cart-header"
+            >
+              <div class="cart-header__icon">
+                <span class="material-icons-outlined icon_cart">shopping_cart</span>
+                <span class="cart-header__num"> 0 </span>
+              </div>
+              <div class="cart-header__body">
+                <div class="cart-header__sum">0 tr.</div>
+                <div class="cart-header__link">Buy Lorem ipsum dolor</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="header__catalog catalog-header">
+          <div class="catalog-header__container">
+            <nav class="catalog-header__menu menu-catalog">
+              <button type="button" class="menu-catalog__back">
+                <span class="material-icons-outlined icon_back"> arrow_back </span>
+                Back
+              </button>
+              <ul class="menu-catalog__list">
+                <li class="menu-catalog__item">
+                  <button type="button" data-parent="1" class="menu-catalog__link">
+                    Catalogue #1
+                  </button>
+                </li>
+                <li class="menu-catalog__item">
+                  <button type="button" data-parent="2" class="menu-catalog__link">
+                    Catalogue #2
+                  </button>
+                </li>
+                <li class="menu-catalog__item">
+                  <a href="#!" class="menu-catalog__link">Catalogue #3</a>
+                </li>
+                <li class="menu-catalog__item">
+                  <a href="#!" class="menu-catalog__link">Catalogue #4</a>
+                </li>
+                <li class="menu-catalog__item">
+                  <a href="#!" class="menu-catalog__link">Catalogue #5</a>
+                </li>
+              </ul>
+              <div class="menu-catalog__sub-menu sub-menu-catalog">
+                <button type="button" class="sub-menu-catalog__back">Back</button>
+                <div class="sub-menu-catalog__container">
+                  <div hidden data-submenu="1" class="sub-menu-catalog__block">
+                    <div class="sub-menu-catalog__category">
+                      <a href="#!" class="sub-menu-catalog__link-category">main category #1</a>
+                    </div>
+                    <div class="sub-menu-catalog__category">
+                      <a href="#!" class="sub-menu-catalog__link-category">auxilary category #2</a>
+                    </div>
+                    <div class="sub-menu-catalog__category">
+                      <a href="#!" class="sub-menu-catalog__link-category">auxilary category #3</a>
+                    </div>
+                    <div class="sub-menu-catalog__category">
+                      <a href="#!" class="sub-menu-catalog__link-category">auxilary category #4</a>
+                    </div>
+
+                    <ul class="sub-menu-catalog__list">
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #3</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #4</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #5</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #6</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #7</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #8</a>
+                      </li>
+                    </ul>
+                    <ul class="sub-menu-catalog__list">
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #3</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #4</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #5</a>
+                      </li>
+                    </ul>
+                    <ul class="sub-menu-catalog__list">
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #3</a>
+                      </li>
+                    </ul>
+                    <ul class="sub-menu-catalog__list">
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #3</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #4</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #5</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #6</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #7</a>
+                      </li>
+                    </ul>
+                    <div class="sub-menu-catalog__footer">
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                    <div class="sub-menu-catalog__footer">
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                    <div class="sub-menu-catalog__footer">
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                    <div class="sub-menu-catalog__footer">
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                  </div>
+                  <div hidden data-submenu="2" class="sub-menu-catalog__block">
+                    <div class="sub-menu-catalog__category">
+                      <a href="#!" class="sub-menu-catalog__link-category"> main category #2</a>
+                    </div>
+                    <div class="sub-menu-catalog__category">
+                      <a href="#!" class="sub-menu-catalog__link-category"> auxilary category #2</a>
+                    </div>
+                    <ul class="sub-menu-catalog__list">
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #3</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #4</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #5</a>
+                      </li>
+                    </ul>
+                    <ul class="sub-menu-catalog__list">
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #1</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #2</a>
+                      </li>
+                      <li class="sub-menu-catalog__item">
+                        <a href="#!" class="sub-menu-catalog__link">category link #3</a>
+                      </li>
+                    </ul>
+                    <div class="sub-menu-catalog__footer">
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                    <div class="sub-menu-catalog__footer">
+                      <a href="#!" class="sub-menu-catalog__all">show all</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="page page_catalogue"></main>
+      <footer class="footer">
+        <section class="footer__text text-footer">
+          <div class="text-footer__container container">
+            <h1 class="text-footer__title">Blah-blah-blah</h1>
+            <p class="text-footer__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia a voluptate
+              impedit necessitatibus quae! Consequuntur placeat laboriosam voluptate corporis
+              officiis ea reiciendis odio, dolorem beatae quod alias voluptas ullam eligendi modi
+              dolor impedit tempore! Velit facere iste reiciendis ducimus veritatis nostrum quasi
+              suscipit fugit quo dolor amet voluptates reprehenderit quia cupiditate, voluptatibus
+              assumenda voluptas eveniet.
+            </p>
+          </div>
+        </section>
+        <div class="footer__container container">
+          <div class="footer__body body-footer">
+            <div class="body-footer__row">
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      INFO
+                    </button>
+                    <div class="spoiler-item-footer__body">
+                      <nav class="menu-footer">
+                        <ul class="menu-footer__list">
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Info Menu Footer Link #1</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Info Menu Footer Link #2</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Info Menu Footer Link #3</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Info Menu Footer Link #4</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Info Menu Footer Link #5</a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <ul class="social-footer">
+                        <li class="social-footer__item">
+                          <a href="" class="social-footer__link">
+                            <img
+                              src="https://pngicon.ru/file/uploads/facebook.png"
+                              alt="social icon"
+                            />
+                          </a>
+                        </li>
+                        <li class="social-footer__item">
+                          <a href="" class="social-footer__link">
+                            <img
+                              src="https://play-lh.googleusercontent.com/lB6Ro6pjPw17G8HnTvv_qerC2yMGlvjVpryNXoeKfxyglyB8Ljk1HUxmegKU85acTmQ=w256"
+                              alt="social icon"
+                            />
+                          </a>
+                        </li>
+                        <li class="social-footer__item">
+                          <a href="" class="social-footer__link">
+                            <img
+                              src="https://play-lh.googleusercontent.com/Zmol9WVk6mjWE38P6wc3Aaz9mQn-VFhviKllLP4kiplfW4xIEjgYmKUalZcFsOOnDQ=s128-rw"
+                              alt="social icon"
+                            />
+                          </a>
+                        </li>
+                        <li class="social-footer__item">
+                          <a href="" class="social-footer__link">
+                            <img
+                              src="https://whatsapped.ru/assets/images/faq/obschie/logotip-whatsapp.png"
+                              alt="social icon"
+                            />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      SUPPORT
+                    </button>
+                    <div class="spoiler-item-footer__body">
+                      <nav class="menu-footer">
+                        <ul class="menu-footer__list">
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Support Menu Footer Link #1</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Support Menu Footer Link #2</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Support Menu Footer Link #3</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      DETAILS
+                    </button>
+                    <div class="spoiler-item-footer__body">
+                      <nav class="menu-footer">
+                        <ul class="menu-footer__list">
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Details Menu Footer Link #1</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Details Menu Footer Link #2</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Details Menu Footer Link #3</a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Details Menu Footer Link #4</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      PRIVATE ACCOUNT
+                    </button>
+                    <div class="spoiler-item-footer__body">
+                      <nav class="menu-footer">
+                        <ul class="menu-footer__list">
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link"
+                              >Private Account Menu Footer Link #1</a
+                            >
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link"
+                              >Private Account Menu Footer Link #2</a
+                            >
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link"
+                              >Private Account Menu Footer Link #3</a
+                            >
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link"
+                              >Private Account Menu Footer Link #4</a
+                            >
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link"
+                              >Private Account Menu Footer Link #5</a
+                            >
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="body-footer__row">
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      CONTACTS
+                    </button>
+                    <div class="spoiler-item-footer__body">
+                      <nav class="menu-footer">
+                        <ul class="menu-footer__list">
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">
+                              <span class="material-icons-outlined icon_phone-footer"> phone </span>
+                              8 (800) 555-66-77
+                            </a>
+                          </li>
+                          <li class="menu-footer__item">
+                            <span class="material-icons-outlined icon_time-footer"> schedule </span>
+                            <div>
+                              <p>Mo - Fr</p>
+                              <p>9am - 5pm</p>
+                            </div>
+                          </li>
+                          <li class="menu-footer__item">
+                            <span class="material-icons icon_location-footer"> place </span>
+                            <div>
+                              <p>Tver</p>
+                              <p>Lenina str.</p>
+                              <p>building 23, office 56</p>
+                            </div>
+                          </li>
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">
+                              <span class="material-icons-outlined icon_mail-footer"> email </span>
+                              na-derevnu-dedushke@mail.zu
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      LINKS
+                    </button>
+                    <div class="spoiler-item-footer__body">
+                      <nav class="menu-footer">
+                        <ul class="menu-footer__list">
+                          <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link"> Delivery </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      GUARANTEE
+                    </button>
+                    <div class="spoiler-item-footer__body">
+                      <div class="spoiler-item-footer__text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt velit
+                        nostrum libero placeat tenetur accusantium sint neque, iusto molestias
+                        tempore nulla ut voluptates odit reprehenderit impedit consectetur atque
+                        aperiam ipsam sunt sapiente iure? Eum maiores porro obcaecati?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-footer__item item-footer">
+                <div data-spoilers="768" class="item-footer__spoiler spoiler-item-footer">
+                  <div class="spoiler-item-footer__item">
+                    <button type="button" data-spoiler class="spoiler-item-footer__title">
+                      SUBSCRIBE
+                    </button>
+                    <form action="#" class="spoiler-item-footer__body footer-subscribe">
+                      <label for="subscribe-input" class="footer-subscribe__label">
+                        Subscribe now!
+                      </label>
+                      <div class="footer-subscribe__line">
+                        <input
+                          id="subscribe-input"
+                          type="text"
+                          placeholder="n@mail.xu"
+                          title=""
+                          data-reqired="email"
+                          autocomplete="off"
+                          name="form[]"
+                          class="footer-subscribe__input"
+                        />
+                        <button type="submit" class="footer-subscribe__button">
+                          <span class="material-icons-outlined icon_subscribe"> arrow_back </span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="body-footer__bottom">
+              <div class="body-footer__rules">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab illum fugit sequi
+                assumenda voluptates? Velit repudiandae quis rerum nam, excepturi, libero at nisi
+                consequatur amet omnis quod? Sapiente laborum doloribus, temporibus possimus sunt
+                eaque quaerat totam est mollitia laudantium animi deserunt beatae nobis architecto
+                magnam facere eos natus. Reprehenderit quibusdam, cum alias esse cumque cupiditate
+                quasi?
+              </div>
+              <div class="body-footer__copy">
+                Blah-blah
+                <span> www.blah-blah.zuj </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/dynamicAdapt.js"></script>
+    <script src="./js/spoilers.js"></script>
+  </body>
+</html>
