@@ -1468,11 +1468,23 @@ button {
   box-shadow: 0em 0.25em 1.25em rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease 0s;
   background-color: #fff;
+  position: relative;
 }
 @media (any-hover: hover) {
   .product-card {
     box-shadow: 0em 0.375em 1.25em rgba(0, 0, 0, 0.35);
   }
+}
+.product-card__sale {
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  background-color: orangered;
+  color: white;
+  z-index: 2;
+  padding: 0.625em 1em;
+  border-radius: 0.625em;
+  pointer-events: none;
 }
 .product-card__image {
   padding: 1.5em;

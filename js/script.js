@@ -240,3 +240,25 @@ if (document.querySelector('.products-new')) {
     on: {},
   });
 }
+
+// ===================================================================
+// noUIslider
+
+const rangeItems = document.querySelectorAll('[data-range]');
+
+if (rangeItems.length) {
+  rangeItems.forEach((rangeItem) => {
+    const fromValue = rangeItem.querySelector('[data-range-from]');
+    const toValue = rangeItem.querySelector('[data-range-to]');
+    const item = rangeItem.querySelector('[data-range-item]');
+
+    noUiSlider.create(rangeItems, {
+      start: [fromValue.value, toValue.value],
+      connect: [true, true],
+      range: {
+        min: [fromValue.dataset.rangeFrom],
+        max: [toValue.dataset.rangeTo],
+      },
+    });
+  });
+}

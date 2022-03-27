@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="./css/nouislider.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/catalog.css" />
     <title>Test Site</title>
@@ -319,7 +320,35 @@
           <div class="catalog">
             <div class="catalog__container container">
               <div class="catalog__body">
-                <div class="catalog__filter"></div>
+                <div class="catalog__filter filter-catalog">
+                  <h2 class="filter-catalog__title">Filter</h2>
+                  <div data-spoilers class="filter-catalog__items">
+                    <div class="filter-catalog__price price-filter">
+                      <button type="button" data-spoiler="" class="price-filter__title">
+                        Price
+                      </button>
+                      <div data-range class="price-filter__body">
+                        <div class="price-filter__inputs">
+                          <input
+                            data-range-from="0"
+                            type="text"
+                            name="form[]"
+                            title="title"
+                            class="price-filter__input"
+                          />
+                          <input
+                            data-range-to="5000"
+                            type="text"
+                            name="form[]"
+                            title="title"
+                            class="price-filter__input"
+                          />
+                        </div>
+                        <div data-range-item="" class="price-filter__range"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="catalog__content">
                   <div class="catalog__control">
                     <select name="form[]" title="c" class="control">
@@ -331,6 +360,7 @@
                   </div>
                   <div class="catalog__products">
                     <article class="product-card">
+                      <div class="product-card__sale">-50%</div>
                       <a href="" class="product-card__image">
                         <span
                           class="product-card__item-image-ibg product-card__item-image-ibg_contain"
@@ -1060,6 +1090,7 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="./js/nouislider.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/dynamicAdapt.js"></script>
     <script src="./js/spoilers.js"></script>
