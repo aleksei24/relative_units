@@ -252,12 +252,13 @@ if (rangeItems.length) {
     const toValue = rangeItem.querySelector('[data-range-to]');
     const item = rangeItem.querySelector('[data-range-item]');
 
-    noUiSlider.create(rangeItems, {
-      start: [fromValue.value, toValue.value],
-      connect: [true, true],
+    noUiSlider.create(item, {
+      start: [Number(fromValue.value), Number(toValue.value)],
+      connect: true,
+      tooltips: [true, true],
       range: {
-        min: [fromValue.dataset.rangeFrom],
-        max: [toValue.dataset.rangeTo],
+        min: [Number(fromValue.dataset.rangeFrom)],
+        max: [Number(toValue.dataset.rangeTo)],
       },
     });
   });
