@@ -14,6 +14,7 @@
     <link href="./css/nouislider.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/catalog.css" />
+    <link rel="stylesheet" href="./css/product.css" />
     <title>Test Site</title>
   </head>
   <body>
@@ -312,486 +313,90 @@
                   </a>
                 </li>
                 <li class="breadcrumbs__item">
-                  <span class="breadcrumbs__current">Special Products</span>
+                  <a href="" class="breadcrumbs__link">
+                    Special Products
+                    <span class="material-icons-outlined icon_breadcrumbs"> chevron_right </span>
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__current">Product you're looking at</span>
                 </li>
               </ul>
             </nav>
           </div>
-          <div class="catalog">
-            <div class="catalog__container container">
-              <div data-spoilers="992" class="catalog__body">
-                <div class="catalog__filter filter-catalog">
-                  <button type="button" data-spoiler="" class="filter-catalog__title">
-                    Filter
-                  </button>
-                  <div data-spoilers class="filter-catalog__items">
-                    <div class="filter-catalog__price price-filter">
-                      <button type="button" data-spoiler="" class="price-filter__title">
-                        Price
-                      </button>
-                      <div data-range class="price-filter__body">
-                        <div class="price-filter__inputs">
-                          <input
-                            data-range-from="0"
-                            type="text"
-                            name="form[]"
-                            title="title"
-                            value="500"
-                            class="price-filter__input"
-                          />
-                          <input
-                            data-range-to="5000"
-                            type="text"
-                            name="form[]"
-                            title="title"
-                            value="3500"
-                            class="price-filter__input"
-                          />
-                        </div>
-                        <div data-range-item="" class="price-filter__range"></div>
-                      </div>
+        </div>
+        <div class="product">
+          <div class="product__container container">
+            <div class="product__main main-product">
+              <div class="main-product__images">
+                <div class="main-product-slider">
+                  <div class="main-product-slider__main">
+                    <img
+                    src="https://media.istockphoto.com/photos/empty-glass-jar-isolated-picture-id922674336?k=20&m=922674336&s=170667a&w=0&h=zhi619d4SNdLII5k8JSUW4xPWT86fHSedvX01yw-Wy8=""
+                    alt="" />
+                  </div>
+                  <div class="main-product-slider__thumbs">
+                    <div class="main-product-slider__thumb">
+                      <img
+                        src="https://media.istockphoto.com/photos/empty-glass-jar-isolated-picture-id922674336?k=20&m=922674336&s=170667a&w=0&h=zhi619d4SNdLII5k8JSUW4xPWT86fHSedvX01yw-Wy8="
+                        alt="Happy New Year"
+                      />
                     </div>
-                    <div class="filter-catalog__item item-filter-catalog">
-                      <button type="button" data-spoiler="" class="item-filter-catalog__title">
-                        Produced by
-                      </button>
-                      <div class="item-filter-catalog__body">Could be checkboxes</div>
+                    <div class="main-product-slider__thumb">
+                      <img
+                        src="https://www.collinsdictionary.com/images/full/pen_525053431_1000.jpg"
+                        alt="Happy New Year"
+                      />
+                    </div>
+                    <div class="main-product-slider__thumb">
+                      <img
+                        src="https://media.istockphoto.com/vectors/pencil-with-rubber-eraser-icon-vector-id1141237858?k=20&m=1141237858&s=170667a&w=0&h=MV7ssLH3MXZU7E6c1dsr_ZegV-8_oLQp8i-LXzemoJ8="
+                        alt="Happy New Year"
+                      />
+                    </div>
+                    <div class="main-product-slider__thumb">
+                      <img
+                        src="https://assets.adidas.com/images/w_600,f_auto,q_auto/dbe85e091cfb40638cf6acde0077ce00_9366/Adicolor_Trefoil_Bucket_Hat_Black_AJ8995_01_standard.jpg"
+                        alt="Happy New Year"
+                      />
                     </div>
                   </div>
                 </div>
-                <div class="catalog__content">
-                  <div class="catalog__control">
-                    <select name="form[]" title="c" class="control">
-                      <option value="1" selected># 1</option>
-                      <option value="2"># 2</option>
-                      <option value="3"># 3</option>
-                      <option value="4"># 4</option>
+              </div>
+              <div class="main-product__body body-product">
+                <div class="body-product__header header-product">
+                  <div class="header-product__line">
+                    <h1 class="header-product__title">Product</h1>
+                    <a href="" class="header-product__link">
+                      <span class="material-icons-outlined icon_balance"> balance </span>
+                    </a>
+                    <a href="" class="header-product__link">
+                      <span class="material-icons-outlined icon_favourite"> favorite_border </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="body-product__table table-product">
+                  <div class="table-product__label">Manufacture Number</div>
+                  <div class="table-product__value">DF675000562229H06</div>
+                  <div class="table-product__label">Trade Mark</div>
+                  <div class="table-product__value">Von Michael</div>
+                  <div class="table-product__label">Series</div>
+                  <div class="table-product__value">Puff Products</div>
+                </div>
+                <div class="body-product__options options-product">
+                  <div class="options-product__label">Glass</div>
+                  <div class="options-product__value">
+                    <select name="form[]" title="choose material" class="form">
+                      <option value="1" selected>#1</option>
+                      <option value="2">#2</option>
+                      <option value="3">#3</option>
+                      <option value="4">#4</option>
                     </select>
                   </div>
-                  <div class="catalog__products">
-                    <article class="product-card">
-                      <div class="product-card__sale">-50%</div>
-                      <a href="./product.html" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                    <article class="product-card">
-                      <a href="" class="product-card__image">
-                        <span
-                          class="product-card__item-image-ibg product-card__item-image-ibg_contain"
-                        >
-                          <img
-                            src="https://atlas-content-cdn.pixelsquid.com/stock-images/baseball-bat-y1JErR1-600.jpg"
-                            alt="product"
-                          />
-                        </span>
-                      </a>
-                      <div class="product-card__body">
-                        <h4 class="product-card__title">
-                          <a href="" class="product-card__link-title">Product name</a>
-                        </h4>
-                        <div class="product-card__info info-product-card">
-                          <div class="info-product-card__size">500x45</div>
-                          <div class="info-product-card__meterials">Plastic, timber</div>
-                        </div>
-                        <div class="product-card__footer">
-                          <div class="product-card__price">99.99$</div>
-                          <a href="" class="product-card__compare">
-                            <span class="material-icons-outlined icon_balance"> balance </span>
-                          </a>
-                          <a href="" class="product-card__favourite">
-                            <span class="material-icons-outlined icon_favourite">
-                              favorite_border
-                            </span>
-                          </a>
-                        </div>
-                        <button type="button" class="product-card__cart button">
-                          Cart
-                          <span class="material-icons-outlined icon_cart"> shopping_cart </span>
-                        </button>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="catalog__footer">
-                    <a href="" class="catalog__more button button_border">More</a>
-                    <div class="catalog__pagging pagging">
-                      <button disabled type="button" class="pagging__arrow">
-                        <span class="material-icons-outlined icon_page-left"> chevron_left </span>
-                      </button>
-                      <ul class="pagging__list">
-                        <li class="pagging__item">
-                          <a href="" class="pagging__link">1</a>
-                        </li>
-                        <li class="pagging__item">
-                          <a href="" class="pagging__link">2</a>
-                        </li>
-                        <li class="pagging__item">
-                          <a href="" class="pagging__link">...</a>
-                        </li>
-                        <li class="pagging__item">
-                          <a href="" class="pagging__link">12</a>
-                        </li>
-                      </ul>
-                      <button type="button" class="pagging__arrow">
-                        <span class="material-icons-outlined icon_page-right"> chevron_right </span>
-                      </button>
-                    </div>
-                  </div>
+                </div>
+                <div class="body-product__actions actions-product">
+                  <div class="actions-product__price">19.95$</div>
+                  <div class="actions-product__row"></div>
                 </div>
               </div>
             </div>
